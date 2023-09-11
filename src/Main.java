@@ -4,9 +4,11 @@ public class Main {
         System.out.println("Задача№1: Ответ.");
         int savings = 0;
         int month = 0;
-        while (savings < 2_459_000) {
+        int totalSavings = 2_459_000;
+        int salary = 15000;
+        while (savings < totalSavings) {
             month++;
-            savings = savings + 15000;
+            savings = savings + salary;
             System.out.println(month + " месяц, сумма накоплений равна " + savings + " рублей.");
         }
         System.out.println();
@@ -41,8 +43,9 @@ public class Main {
         System.out.println("Задача№4: Ответ.");
         double wulad = 15000;
         double percent = 0.07;
+        int totalZ = 12_000_000;
         int monthi = 0;
-        while (wulad < 12_000_000) {
+        while (wulad < totalZ) {
             wulad = wulad + wulad * percent;
             monthi++;
             System.out.println(monthi + " месяц. Накоплено " + (int)wulad + " рублей.");
@@ -52,7 +55,8 @@ public class Main {
         System.out.println("Задача№5: Ответ.");
         double wuladi = 15000;
         int monthg = 0;
-        while (wuladi < 12_000_000) {
+        int totalD = 12_000_000;
+        while (wuladi < totalD) {
             wuladi = wuladi + wuladi * percent;
             monthg++;
             if (monthg % 6 == 0) {
@@ -64,7 +68,8 @@ public class Main {
         System.out.println("Задача№6: Ответ.");
         double wuladk = 15000;
         int monthd = 0;
-        while (monthd <= 108) {
+        int totalMonthd = 9 * 12;
+        while (monthd <= totalMonthd) {
             wuladk = wuladk + wuladk * percent;
             monthd++;
             if (monthd % 6 == 0) {
@@ -74,10 +79,11 @@ public class Main {
         System.out.println();
         //Задача№7
         System.out.println("Задача№7: Ответ.");
-        int day = 3;
+        int day = 0;
+        int friday = 2;
         while (day < 31) {
             day++;
-            if (day % 5 == 0) {
+            if (day % 7 == friday) {
                 System.out.println("Сегодня пятница, " + day + " число. Необходимо подготовить отчет.");
             }
         }
@@ -89,7 +95,7 @@ public class Main {
         int startYear = currentYear - 200;
         int endYear = currentYear + 100;
         for (int year = startYear; year <= endYear; year++) {
-            if ((year - startYear) % cometPeriod == 0) {
+            if (year % cometPeriod == 0) {
                 System.out.println(year);
             }
         }
